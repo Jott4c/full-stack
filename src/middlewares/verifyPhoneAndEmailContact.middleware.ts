@@ -16,6 +16,8 @@ const verifyPhoneAndEmailAvailabilityMiddleWare = async (
 
   const phoneArealdyExists = users.find((user) => user.phone === phone);
 
+  console.log(emailArealdyExists, phoneArealdyExists);
+
   if (emailArealdyExists) {
     return res
       .status(400)
